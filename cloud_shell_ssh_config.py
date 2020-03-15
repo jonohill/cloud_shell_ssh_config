@@ -43,7 +43,7 @@ except FileNotFoundError:
     pass
 
 TAB = '    '
-if new_file[-1].strip() != '':
+if len(new_file) and new_file[-1].strip() != '':
     new_file.append('')
 new_file.append(f'Host {args.host}')
 for k, v in vars(cs_args).items():
